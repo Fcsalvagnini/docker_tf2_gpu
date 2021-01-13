@@ -1,0 +1,45 @@
+version: "3"
+
+# Usefull links to understand how this works
+# NVIDIA Docker: GPU Server Application Deployment Made Easy: https://developer.nvidia.com/blog/nvidia-docker-gpu-server-application-deployment-made-easy/
+# Tensorflow docker: https://www.tensorflow.org/install/docker
+# In order to "runtime: nvidia work", is necessary an updated docker-compose v1.27.4
+# To verify if you can use GPU: https://www.tensorflow.org/guide/gpu
+# Extra: Learn how to do multi-stage builds: https://docs.docker.com/develop/develop-images/multistage-build/
+# Extra: docker save: https://docs.docker.com/engine/reference/commandline/save/
+# Extra: docker load: https://docs.docker.com/engine/reference/commandline/load/
+
+services: # containers
+  tensorflow-gpu:
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    
+    build:
+      # Changes the current folder for docker-compose
+      context: .
+      dockerfile: ./Dockerfile
+      args: 
+        - username=crispa
+        - userid=1000
+    
+    container_name: tf-gpu
+    image: tf-gpu
+    # Restart policies
+    restart: unless-stopped
+    
+    # Logging configuration for the service
+    logging: 
+      driver: json-file
+      options: 
+        max-size: 50m
+    
+    ports: 
+      - "8888:8888"
+      - "6006:6006"
+    
+    volumes:
+      - ./handson-ml2/:/home/crispa/src/
+
+    command: /opt/conda/envs/tf-gpu/bin/jupyter-lab --ip='0.0.0.0' --port=8888 --no-browser
+    
