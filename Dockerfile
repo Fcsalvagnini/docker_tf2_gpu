@@ -1,6 +1,6 @@
 FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
 # Learn how to make a multistage dockerfile
-#FROM continuumio/miniconda3:latest
+# FROM continuumio/miniconda3:latest
 
 # Necessary to specify /usr/local/cuda/lib64 in order to avoid mismatch
 # of driver versions
@@ -21,21 +21,6 @@ RUN apt update && apt upgrade -y \
 
 
 # ****************** Install Miniconda ************************* #
-# ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
-# RUN apt-get update -q && \
-#     apt-get install -q -y \
-#         bzip2 \
-#         ca-certificates \
-#         git \
-#         libglib2.0-0 \
-#         libsm6 \
-#         libxext6 \
-#         libxrender1 \
-#         mercurial \
-#         subversion \
-#         wget \
-#     && apt-get clean
-
 ENV PATH /opt/conda/bin:$PATH
 
 CMD [ "/bin/bash" ]
