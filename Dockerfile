@@ -83,6 +83,6 @@ ENV PATH /opt/conda/envs/tf-gpu/bin:$PATH
 
 # Adds some alias to bashrc (alias to call more specific commands)
 COPY bashrc.bash /tmp/
-RUN cat /tmp/bashrc.bash >> ${home}/.bashrc \
+RUN conda init && cat /tmp/bashrc.bash >> ${home}/.bashrc \
     && echo "export PATH=\"${workdir}/docker/bin:$PATH\"" >> ${home}/.bashrc \
     && sudo rm /tmp/bashrc.bash
