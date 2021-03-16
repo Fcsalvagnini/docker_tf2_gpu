@@ -5,17 +5,17 @@ channels: # Channnels list to search for conda packages
 dependencies: # Conda packages
   - graphviz
   - imageio=2.6
-  - ipython=7.12
-  - ipywidgets=7.5
+  - ipython=7.20
+  - ipywidgets=7.6
   - joblib=0.14
   - jupyterlab=1.0.10
-  - matplotlib=3.1
-  - nbdime=2.0
+  - matplotlib=3.3
+  - nbdime=2.1
   - nltk=3.4
   - numexpr=2.7
-  - numpy=1.18
-  - pandas=1.0
-  - pillow=7.0
+  - numpy=1.19
+  - pandas=1.2
+  - pillow=8.1
   - pip
   - psutil=5.7
   - py-xgboost=0.90
@@ -24,33 +24,34 @@ dependencies: # Conda packages
   - pyopengl=3.1
   - python=3.7
   - python-graphviz
-  - requests=2.22
+  - requests=2.25
   - scikit-image=0.16
-  - scikit-learn=0.22
-  - scipy=1.4
-  - tqdm=4.43
+  - scikit-learn=0.24
+  - scipy=1.6
+  - tqdm=4.56
   - wheel
   - widgetsnbextension=3.5
   - pip: # Pip packages
     - atari-py==0.2.6
-    - ftfy==5.7
-    - gast==0.2.2
-    - gym==0.17.1
-    - opencv-python==4.2.0.32
+    - ftfy==5.8
+    - gast==0.3.3
+    - gym==0.18
+    - opencv-python==4.5.1.48
     - spacy==2.2.4
-    - tensorboard==2.1.1
-    - tensorflow-addons==0.8.3
-    - tensorflow-data-validation==0.21.5
-    - tensorflow-datasets==2.1.0
-    - tensorflow-estimator==2.1.0
-    - tensorflow-hub==0.7.0
-    - tensorflow-metadata==0.21.1
-    - tensorflow-model-analysis==0.21.6
-    - tensorflow-probability==0.9.0
-    - tensorflow-serving-api-gpu==2.1.0 # or tensorflow-serving-api-gpu if gpu
-    - tensorflow-transform==0.21.2
-    - tensorflow-gpu==2.1.0 # or tensorflow-gpu if gpu
-    - tf-agents==0.3.0
-    - tfx==0.21.2
-    - transformers==2.8.0
-    - urlextract==0.14.0
+    - tensorboard-plugin-profile==2.4.0
+    - tensorboard==2.4.1
+    - tensorflow-addons==0.12.1
+    - tensorflow-data-validation==0.28.0
+    - tensorflow-datasets==3.0.0
+    - tensorflow-estimator==2.4.0
+    - tensorflow-hub==0.9.0
+    - tensorflow-metadata==0.28.0
+    - tensorflow-model-analysis==0.28.0
+    - tensorflow-probability==0.12.1
+    - tensorflow-serving-api-gpu==2.4.1
+    - tensorflow-transform==0.28.0
+    - tensorflow-gpu==2.4.1 
+    - tf-agents==0.7.1
+    - tfx==0.28.0
+    - transformers==4.3
+    - urlextract==1.2.0

@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
+FROM nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu20.04
 # Learn how to make a multistage dockerfile
 # FROM continuumio/miniconda3:latest
 
