@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-To this work correctly you need to install the following software:
+To build and execute the container correctly, you need to install the following software:
 
 - [NVIDIA driver](https://www.nvidia.com/download/index.aspx?lang=en-us).
   - If you use ubuntu, follow [these instructions](https://linuxize.com/post/how-to-nvidia-drivers-on-ubuntu-20-04/) to install or update NVIDIA drivers.
