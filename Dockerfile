@@ -15,7 +15,7 @@ RUN apt update && apt upgrade -y \
         cmake zlib1g-dev libjpeg-dev \
         xvfb ffmpeg xorg-dev \
         libboost-all-dev libsdl2-dev \
-        swig unzip zip wget \
+        swig unzip zip wget protobuf-compiler \
     && rm -rf /var/lib/apt/lists/*
 # rm command deletes the cache of apt
 
